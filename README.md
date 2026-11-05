@@ -2,6 +2,8 @@
 
 **Applied AI · Machine Learning Engineering · Python Development**
 
+[Portfolio website](https://olabanjiolaide.github.io/olabanjiolaide/) · [LinkedIn](https://www.linkedin.com/in/olabanji-olaide-239104b0/)
+
 I build Python-based machine learning tools with an emphasis on reproducible experiments, honest evaluation, and tested prediction services. My background spans Computer Engineering and Computer Science, with research experience in multimodal federated learning at Concordia University.
 
 I am seeking applied AI, ML engineering, and Python development opportunities in Canada.
