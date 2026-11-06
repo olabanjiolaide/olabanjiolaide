@@ -25,3 +25,46 @@ header{padding:12px 18px}nav a{min-height:44px;display:inline-flex;align-items:c
 @media(prefers-reduced-motion:reduce){.profile-panel:hover{transform:none}}
 
 @media(max-width:800px){.hero:before{inset:0}.profile-panel .portrait{height:340px;min-height:0}}
+
+/* Impeccable refinement: content-led editorial hierarchy, not decorative labels. */
+@font-face{font-family:Newsreader;src:url("fonts/newsreader.woff") format("woff");font-style:normal;font-weight:200 800;font-display:swap}
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--motion-fast:160ms;--motion-medium:220ms}
+h1,.section-heading h2,.connect h2{font-family:Newsreader,Georgia,serif;font-weight:450;letter-spacing:-.025em}
+.hero h1{font-size:clamp(60px,6.8vw,88px);line-height:1.02;margin-bottom:28px}
+.hero h1 em{font-family:inherit;font-style:normal;font-weight:450}
+h3,h4,.project h3,.role{letter-spacing:-.02em}
+.hero{padding-top:64px;align-items:center}
+.hero:before{background:none}
+.hero-note{font-size:15px}
+.affiliation{border-left:0;padding-left:0;font-size:13px}
+header{background:#f7f7f2;border:0;backdrop-filter:none;box-shadow:none;border-radius:0;border-bottom:1px solid var(--line);top:0;margin-top:0!important;padding:16px 0}
+nav a[aria-current="location"]{background:none;border-radius:0;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+.section-heading h2{font-size:44px;line-height:1.1;max-width:540px;margin-bottom:22px}
+.research .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.research-grid{display:block;margin:0}
+.research-grid article{padding:26px 0;border:0;border-top:1px solid #c7d4c1;border-radius:0;box-shadow:none;background:none;transform:none}
+.research-grid article:first-child{padding-top:0;border-top:0}
+.research-grid article:hover{transform:none;box-shadow:none;border-color:#c7d4c1}
+.research-grid h3{font-size:23px;margin:0 0 12px}
+.research-grid p{font-size:16px;margin-bottom:14px}
+.research-grid .theme-detail{border:0;padding:0;margin-top:0;font-size:12px}
+.profile-panel{border:0;border-radius:14px;box-shadow:0 16px 42px #17352b10}
+.profile-panel:hover{transform:none;box-shadow:0 16px 42px #17352b10}
+.portrait:after{display:none}
+.project-detail{border:0;border-radius:0;background:none;padding:24px 0 0;border-top:1px solid var(--line)}
+.interactive-preview{border:0;border-radius:14px;box-shadow:0 18px 45px #12303914}
+.project h3{font-size:32px}
+.preview-topbar{font-family:inherit;font-size:11px;letter-spacing:.06em}
+.icon-arrow{width:17px;height:17px;flex-shrink:0;display:inline-block;vertical-align:middle}
+nav a{gap:6px}
+.button,.preview-controls button{transition:transform var(--motion-fast) var(--ease-out),background-color var(--motion-fast),color var(--motion-fast),box-shadow var(--motion-fast)}
+.button:active,.preview-controls button:active{transform:scale(.97)}
+a{cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
+@media(hover:none),(pointer:coarse){.button:hover{transform:none;box-shadow:0 7px 16px #12303914;background:var(--ink)}.button.light:hover{background:var(--accent);color:var(--ink)}.button:hover span,.profile-panel:hover img,.project-preview:hover img{transform:none}.research-grid article:hover{transform:none}}
+@media(hover:hover) and (pointer:fine){.button:hover{transform:translateY(-2px)}.profile-panel:hover .portrait img{transform:scale(1.02)}}
+@media(max-width:1000px){.research .wrap{gap:40px}.hero h1{font-size:72px}.section-heading h2{font-size:40px}}
+@media(max-width:800px){.research .wrap{grid-template-columns:1fr;gap:30px}.hero h1{font-size:72px}.section-heading h2{font-size:40px}.research-grid{display:grid;grid-template-columns:1fr;gap:0}.research-grid article:first-child{border-top:1px solid #c7d4c1;padding-top:24px}}
+@media(max-width:480px){header{padding:12px 0}.hero{padding-top:36px}.hero h1{font-size:60px}.hero-note{font-size:14px}.section-heading h2{font-size:36px}.research-grid h3{font-size:22px}.project h3{font-size:29px}.button:active,.preview-controls button:active{transform:scale(.98)}}
+@media(prefers-reduced-motion:reduce){.button:active,.preview-controls button:active,.button:hover,.profile-panel:hover .portrait img{transform:none!important}}

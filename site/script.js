@@ -31,12 +31,12 @@
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         if (!reducedMotion.matches) {
-          entry.target.animate([{ opacity: .2, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 650, easing: 'cubic-bezier(.2,.65,.3,1)' });
+          entry.target.animate([{ opacity: .2, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 300, easing: 'cubic-bezier(.2,.65,.3,1)' });
         }
         observer.unobserve(entry.target);
       }
     }, { threshold: .12 });
-    document.querySelectorAll('.section-heading, .research-grid article, .project, .experience-row').forEach(el => observer.observe(el));
+    document.querySelectorAll('.project').forEach(el => observer.observe(el));
     reducedMotion.addEventListener('change', () => {
       if (reducedMotion.matches) document.getAnimations().forEach(animation => animation.cancel());
     });
@@ -59,7 +59,7 @@
   let request = 0;
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   controls.hidden = false;
-  buttons.forEach(button => button.addEventListener('click', () => {
+  buttons.forEach(button => button.addEventListener('click', event => {
     if (button.getAttribute('aria-pressed') === 'true') return;
     const view = views[button.dataset.view];
     const sequence = ++request;
@@ -73,7 +73,8 @@
       caption.textContent = view.caption;
       screen.removeAttribute('aria-busy');
       buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      if (!motion.matches && screen.animate) screen.animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:230,easing:'ease-out'});
+      screen.getAnimations().forEach(animation => animation.cancel());
+      if (event.detail !== 0 && !motion.matches && screen.animate) screen.animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'cubic-bezier(.23,1,.32,1)'});
     };
     image.onerror = () => {
       if (sequence !== request) return;
