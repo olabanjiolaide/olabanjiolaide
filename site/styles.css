@@ -93,3 +93,6 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 
 /* Let enlarged text reflow rather than force a wider page. */
 .hero>*,.project-showcase>*,.case-section>*,.experience-grid>*,dl>div>*{min-width:0}h1,h2,h3,h4,dd,.button,.text-link,.case-links a{overflow-wrap:anywhere}h1 em{white-space:normal}.button{max-width:100%}.preview-controls{flex-wrap:wrap}.preview-controls button{flex:1 1 90px;min-width:0}header nav a{white-space:normal}
+
+/* Research overview: context beside the problem, approach, and relevance. */
+.research-context{font-size:14px;color:var(--muted);line-height:1.7;margin:24px 0 12px}.research .section-heading .text-link{gap:8px;max-width:100%;line-height:1.5}.research-grid article p{max-width:68ch}
