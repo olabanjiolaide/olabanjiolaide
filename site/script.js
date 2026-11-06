@@ -76,6 +76,8 @@
       if (sequence !== request) return;
       screen.src = image.src;
       screen.alt = view.alt;
+      screen.width = image.naturalWidth;
+      screen.height = image.naturalHeight;
       if (fullSize) fullSize.href = image.src;
       caption.textContent = view.caption;
       screen.removeAttribute('aria-busy');
