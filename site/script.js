@@ -42,3 +42,44 @@
     });
   }
 })();
+/* Inspired by 0xUrvish's Bento Card on 21st.dev.
+   Original vanilla JavaScript adaptation; no React runtime required. */
+(() => {
+  const controls = document.querySelector('.preview-controls');
+  const screen = document.querySelector('#project-screen');
+  const caption = document.querySelector('#preview-caption');
+  if (!controls || !screen || !caption) return;
+  const root = 'https://raw.githubusercontent.com/olabanjiolaide/support-ticket-ai/main/docs/images/';
+  const views = {
+    workspace: { file: 'workspace-modern-light.png', alt: 'Support Ticket AI workspace for reviewing a model suggestion', caption: 'Workspace · Review a model suggestion before confirming a category.' },
+    requests: { file: 'requests-overview.png', alt: 'Support Ticket AI saved requests overview', caption: 'All requests · Browse saved requests and their review status.' },
+    resolved: { file: 'requests-resolved.png', alt: 'Support Ticket AI resolved requests view', caption: 'Resolved · Review requests marked as resolved.' }
+  };
+  const buttons = [...controls.querySelectorAll('button[data-view]')];
+  let request = 0;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  controls.hidden = false;
+  buttons.forEach(button => button.addEventListener('click', () => {
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    const view = views[button.dataset.view];
+    const sequence = ++request;
+    caption.textContent = 'Loading preview…';
+    screen.setAttribute('aria-busy', 'true');
+    const image = new Image();
+    image.onload = () => {
+      if (sequence !== request) return;
+      screen.src = image.src;
+      screen.alt = view.alt;
+      caption.textContent = view.caption;
+      screen.removeAttribute('aria-busy');
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      if (!motion.matches && screen.animate) screen.animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:230,easing:'ease-out'});
+    };
+    image.onerror = () => {
+      if (sequence !== request) return;
+      screen.removeAttribute('aria-busy');
+      caption.textContent = 'This preview could not load. The current screenshot is still available; explore the repository for more.';
+    };
+    image.src = root + view.file;
+  }));
+})();
