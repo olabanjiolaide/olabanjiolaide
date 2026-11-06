@@ -48,6 +48,7 @@
   const controls = document.querySelector('.preview-controls');
   const screen = document.querySelector('#project-screen');
   const caption = document.querySelector('#preview-caption');
+  const fullSize = document.querySelector('#preview-full');
   if (!controls || !screen || !caption) return;
   const root = 'https://raw.githubusercontent.com/olabanjiolaide/support-ticket-ai/main/docs/images/';
   const views = {
@@ -60,9 +61,14 @@
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   controls.hidden = false;
   buttons.forEach(button => button.addEventListener('click', event => {
-    if (button.getAttribute('aria-pressed') === 'true') return;
-    const view = views[button.dataset.view];
     const sequence = ++request;
+    // Clicking the visible selection also cancels any pending switch.
+    if (button.getAttribute('aria-pressed') === 'true') {
+      screen.removeAttribute('aria-busy');
+      caption.textContent = views[button.dataset.view].caption;
+      return;
+    }
+    const view = views[button.dataset.view];
     caption.textContent = 'Loading preview…';
     screen.setAttribute('aria-busy', 'true');
     const image = new Image();
@@ -70,10 +76,11 @@
       if (sequence !== request) return;
       screen.src = image.src;
       screen.alt = view.alt;
+      if (fullSize) fullSize.href = image.src;
       caption.textContent = view.caption;
       screen.removeAttribute('aria-busy');
       buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      screen.getAnimations().forEach(animation => animation.cancel());
+      if (screen.getAnimations) screen.getAnimations().forEach(animation => animation.cancel());
       if (event.detail !== 0 && !motion.matches && screen.animate) screen.animate([{opacity:.4,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'cubic-bezier(.23,1,.32,1)'});
     };
     image.onerror = () => {
