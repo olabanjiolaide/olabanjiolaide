@@ -99,3 +99,6 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 
 /* Experience entries: factual dates and readable responsibilities. */
 .experience .section-heading .text-link{margin-bottom:4px}.experience-row .entry-label{letter-spacing:0;text-transform:none;font-size:13px;line-height:1.6}.experience-row h4:last-child{margin-bottom:0}.experience-row p:last-child{max-width:62ch}
+
+/* Hallmark-informed polish within the established portfolio system. */
+.preview-topbar{letter-spacing:0;font-size:14px;font-family:inherit}.preview-status{font-size:12px;letter-spacing:0}
