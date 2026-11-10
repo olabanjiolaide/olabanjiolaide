@@ -96,3 +96,6 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 
 /* Research overview: context beside the problem, approach, and relevance. */
 .research-context{font-size:14px;color:var(--muted);line-height:1.7;margin:24px 0 12px}.research .section-heading .text-link{gap:8px;max-width:100%;line-height:1.5}.research-grid article p{max-width:68ch}
+
+/* Experience entries: factual dates and readable responsibilities. */
+.experience .section-heading .text-link{margin-bottom:4px}.experience-row .entry-label{letter-spacing:0;text-transform:none;font-size:13px;line-height:1.6}.experience-row h4:last-child{margin-bottom:0}.experience-row p:last-child{max-width:62ch}
