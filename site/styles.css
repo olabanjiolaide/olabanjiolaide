@@ -102,3 +102,6 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 
 /* Hallmark-informed polish within the established portfolio system. */
 .preview-topbar{letter-spacing:0;font-size:14px;font-family:inherit}.preview-status{font-size:12px;letter-spacing:0}
+
+/* Second project: an editorial summary with evidence, without invented imagery. */
+.project-secondary{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;border-top:1px solid var(--line);padding-top:44px;margin-top:60px}.project-secondary h3{font-size:32px;letter-spacing:-.025em;margin-bottom:18px}.project-secondary h4{font-size:18px}.project-secondary p{color:var(--muted)}.project-secondary .text-link{font-size:15px}@media(max-width:800px){.project-secondary{grid-template-columns:1fr;gap:24px}}@media(max-width:480px){.project-secondary{margin-top:40px;padding-top:32px}.project-secondary h3{font-size:29px}}@media print{.project-secondary{display:block;break-inside:avoid}}
