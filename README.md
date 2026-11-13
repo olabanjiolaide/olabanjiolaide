@@ -1,42 +1,52 @@
 # Olabanji Olaide
 
-**Applied AI · Machine Learning Engineering · Python Development**
+**AI research · Machine learning engineering · Python development**
 
-[Portfolio website](https://olabanjiolaide.github.io/olabanjiolaide/) · [LinkedIn](https://www.linkedin.com/in/olabanji-olaide-239104b0/)
+[Portfolio & case studies](https://olabanjiolaide.github.io/olabanjiolaide/) · [Download CV (PDF)](https://olabanjiolaide.github.io/olabanjiolaide/documents/Olabanji_Olaide_CV.pdf) · [LinkedIn](https://www.linkedin.com/in/olabanji-olaide-239104b0/)
 
-I build Python-based machine learning tools with an emphasis on reproducible experiments, honest evaluation, and tested prediction services. My background spans Computer Engineering and Computer Science, with research experience in multimodal federated learning at Concordia University.
+I study multimodal and federated learning at the Network Intelligence and Innovation Lab (NI2Lab), Concordia University, focusing on how privacy and resource constraints shape learning in edge networks. I also build Python tools that connect model evaluation with tested prediction services.
 
 I am seeking applied AI, ML engineering, and Python development opportunities in Canada.
 
-## Featured project: Support Ticket AI
+## Selected public projects
 
-[Explore the repository](https://github.com/olabanjiolaide/support-ticket-ai) · [Run the demo](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/07-running-the-demo.md) · [Read the evaluation](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/04-baseline-results.md)
+### Support Ticket AI
 
-[![Python checks](https://github.com/olabanjiolaide/support-ticket-ai/actions/workflows/tests.yml/badge.svg)](https://github.com/olabanjiolaide/support-ticket-ai/actions/workflows/tests.yml)
+A Python, scikit-learn, and FastAPI application for reviewing support-request classifications and keeping a traceable record of human decisions.
 
-A support-request classification prototype built with Python, scikit-learn, and FastAPI.
+- Build validated data pipelines, duplicate-aware splits, reproducible models, and a prediction CLI/API.
+- Preserve original predictions when reviewers confirm or correct categories.
+- Support saved requests, review notes, status history, and a review workspace.
+- Document error analysis, calibration experiments, and model limitations alongside automated checks.
 
-- Validated CSV ingestion, duplicate-aware splits, pinned source downloads, and checksum verification.
-- TF-IDF/logistic-regression baseline with class-level metrics and reproducible reports.
-- Prediction CLI and API with input validation, model verification, and liveness/readiness checks.
-- Automated tests, GitHub Actions, and a downloadable demo bundle.
-- Similarity analysis and an offline calibration experiment that documents a case where a wrong suggestion becomes more confident.
+**Evaluation scope:** the baseline source is synthetic, and validation scores are not a production reliability claim. Live suggestions require human review; experimental proposal quality remains unevaluated.
 
-**Evaluation scope:** the source is synthetic, the final test set is reserved, and every live suggestion requires human review. This project demonstrates an ML engineering workflow; its validation score is not a production reliability claim.
+[Engineering case study](https://olabanjiolaide.github.io/olabanjiolaide/support-ticket-ai.html) · [Repository](https://github.com/olabanjiolaide/support-ticket-ai) · [Run locally](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/07-running-the-demo.md) · [Baseline evaluation](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/04-baseline-results.md)
+
+### TriDecept-MARL
+
+A Python simulation project for comparing defensive policies in CAGE Challenge 4 / CybORG.
+
+- Build environment adapters and audit action semantics across distributed defenders.
+- Handle multi-step simulator actions and compare heuristic and learned policies.
+- Record seeds, configurations, action counts, and checkpoints for reproducible experiments.
+
+**Current result:** the minimal independent REINFORCE experiment passed its software and checkpoint checks, but the trained policy matched the untrained actor's test mean returns and performed worse than Analyse–Restore on the tested seeds. These are small simulation experiments, not real-network security results.
+
+[Simulation case study](https://olabanjiolaide.github.io/olabanjiolaide/tridecept-marl.html) · [Repository](https://github.com/olabanjiolaide/tridecept-marl) · [Learning experiment](https://github.com/olabanjiolaide/tridecept-marl/blob/main/docs/16-learning-smoke.md)
 
 ## Skills demonstrated
 
-| Area | Examples in the public project |
+| Area | Public examples |
 | --- | --- |
-| Python development | Modules, command-line interfaces, data validation, unit and integration tests |
-| Machine learning | Text features, classification, baselines, probability metrics, error analysis |
-| ML engineering | Data provenance, versioned artifacts, checksums, model loading, API serving |
+| Python development | Modules, command-line tools, data validation, unit and integration tests |
+| Machine learning | Classification, baseline comparisons, probability metrics, error analysis |
+| ML engineering | Data provenance, model verification, API serving, human review workflows |
+| Simulation & evaluation | Environment adapters, action-space audits, seeded runs, checkpoint replay |
 | Development workflow | Git, GitHub Actions, reproducible setup, technical documentation |
 
 ## Research interests
 
-Multimodal learning, federated learning, privacy-aware AI, and learning in edge networks.
+Multimodal learning, federated learning, privacy-aware edge AI, and resource-constrained distributed systems.
 
-## Connect
-
-[LinkedIn](https://www.linkedin.com/in/olabanji-olaide-239104b0/)
+[Visit my portfolio](https://olabanjiolaide.github.io/olabanjiolaide/) for research context, experience, and detailed project case studies.
