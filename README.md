@@ -33,7 +33,9 @@ A Python simulation project for comparing defensive policies in CAGE Challenge 4
 
 **Current result:** the minimal independent REINFORCE experiment passed its software and checkpoint checks, but the trained policy matched the untrained actor's test mean returns and performed worse than Analyse–Restore on the tested seeds. These are small simulation experiments, not real-network security results.
 
-[Simulation case study](https://olabanjiolaide.github.io/olabanjiolaide/tridecept-marl.html) · [Repository](https://github.com/olabanjiolaide/tridecept-marl) · [Learning experiment](https://github.com/olabanjiolaide/tridecept-marl/blob/main/docs/16-learning-smoke.md)
+[Simulation case study](https://olabanjiolaide.github.io/olabanjiolaide/tridecept-marl.html)
+
+Source repository and experiment reports are private.
 
 ## Skills demonstrated
 
