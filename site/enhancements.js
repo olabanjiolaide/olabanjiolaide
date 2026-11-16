@@ -47,3 +47,30 @@ dialog.addEventListener('close', () => {
   if (trigger) trigger.focus({preventScroll:true});
 });
 })();
+/* Restore deep-link position after initial fonts and images settle. Native links remain usable without JavaScript. */
+(() => {
+  if (!location.hash) return;
+  let id;
+  try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  const target = document.getElementById(id);
+  if (!target) return;
+  const initialHash = location.hash;
+  let userMoved = false;
+  const cancel = () => { userMoved = true; };
+  const inputs = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
+  inputs.forEach(type => window.addEventListener(type, cancel, { passive: true, once: true }));
+  async function alignInitialTarget() {
+    if (document.fonts && document.fonts.ready) await document.fonts.ready;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      inputs.forEach(type => window.removeEventListener(type, cancel));
+      if (userMoved || location.hash !== initialHash) return;
+      const root = document.documentElement;
+      const previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start', behavior: 'auto' });
+      root.style.scrollBehavior = previous;
+    }));
+  }
+  if (document.readyState === 'complete') alignInitialTarget();
+  else window.addEventListener('load', alignInitialTarget, { once: true });
+})();

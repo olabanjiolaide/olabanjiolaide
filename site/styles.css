@@ -194,3 +194,8 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 html{scroll-padding-top:96px}main>section,.case-section{scroll-margin-top:0}
 @media(min-width:601px) and (max-width:980px){html{scroll-padding-top:170px}main>section,.case-section{scroll-margin-top:0}}
 @media(max-width:600px){html{scroll-padding-top:24px}main>section,.case-section{scroll-margin-top:0}}
+
+/* Demonstrated technical skills, between projects and experience. */
+.skills-section{padding-top:64px;padding-bottom:64px;border-top:1px solid var(--line)}.skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.skills-grid>div{border-top:1px solid var(--line);padding-top:20px;min-width:0}.skills-grid h3{font-size:18px;margin-bottom:12px}.skills-grid p{font-size:15px;color:var(--ink);margin-bottom:10px}.skills-grid .skills-context{font-size:14px;color:var(--muted);margin:0}.skills-section .section-heading h2{margin-bottom:32px}
+@media(max-width:800px){.skills-grid{grid-template-columns:1fr;gap:24px}.skills-section{padding-top:40px;padding-bottom:40px}}
+@media print{.skills-grid{display:block}.skills-grid>div{break-inside:avoid}}
