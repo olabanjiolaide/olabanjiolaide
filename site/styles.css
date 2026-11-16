@@ -161,3 +161,9 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 /* Actual historical results viewer, with implementation kept in the private repository. */
 .tri-project-preview{grid-column:1/-1;display:block;padding:24px;border:1px solid var(--line);border-radius:14px;background:#e9eee5;overflow:hidden}.tri-project-preview img{display:block;width:100%;height:auto;border-radius:8px}.tri-case-visual{margin:0 0 44px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0c1422}.tri-case-visual img{display:block;width:100%;height:auto}.tri-case-visual figcaption{background:var(--paper);color:var(--muted);padding:18px 22px;font-size:14px;line-height:1.7}.tri-case-visual a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
 @media(max-width:480px){.tri-project-preview{padding:12px}.tri-case-visual figcaption{padding:14px 16px}}
+
+/* Consistent case-study captures and cross-project reading paths. */
+.case-visual img{aspect-ratio:auto;object-fit:contain}
+.related-projects{display:block;border-top:1px solid var(--line);padding:32px 0 8px;margin-top:20px}.related-projects h2{font:450 30px/1.2 Newsreader,Georgia,serif;margin:0 0 18px}.related-projects>div{display:grid;grid-template-columns:1fr 1fr;gap:16px}.related-projects a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:16px;text-decoration:none}.related-projects a:hover{border-color:var(--green)}
+@media(max-width:600px){.related-projects>div{grid-template-columns:1fr}.case-visual img{aspect-ratio:auto}}
+@media print{.related-projects{display:none}}
