@@ -50,7 +50,10 @@
   const caption = document.querySelector('#preview-caption');
   const fullSize = document.querySelector('#preview-full');
   if (!controls || !screen || !caption) return;
-  const root = 'https://raw.githubusercontent.com/olabanjiolaide/support-ticket-ai/main/docs/images/';
+  const root = 'images/';
+  const originals = 'https://raw.githubusercontent.com/olabanjiolaide/support-ticket-ai/main/docs/images/';
+  const previewSizes = "(max-width: 600px) calc(100vw - 36px), (max-width: 1164px) calc(100vw - 64px), 1100px";
+  const previewSrcset = file => [480, 800, 1440].map(width => root + file.replace('.png', '-' + width + '.webp') + ' ' + width + 'w').join(', ');
   const views = {
     workspace: { file: 'workspace-modern-light.png', alt: 'Support Ticket AI workspace for reviewing a model suggestion', caption: 'Workspace · Review a model suggestion before confirming a category.' },
     requests: { file: 'requests-overview.png', alt: 'Support Ticket AI saved requests overview', caption: 'All requests · Browse saved requests and their review status.' },
@@ -74,11 +77,13 @@
     const image = new Image();
     image.onload = () => {
       if (sequence !== request) return;
+      screen.sizes = previewSizes;
+      screen.srcset = image.srcset;
       screen.src = image.src;
       screen.alt = view.alt;
-      screen.width = image.naturalWidth;
-      screen.height = image.naturalHeight;
-      if (fullSize) fullSize.href = image.src;
+      screen.width = 1440;
+      screen.height = { workspace: 1394, requests: 1230, resolved: 1000 }[button.dataset.view];
+      if (fullSize) fullSize.href = originals + view.file;
       caption.textContent = view.caption;
       screen.removeAttribute('aria-busy');
       buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
@@ -90,6 +95,8 @@
       screen.removeAttribute('aria-busy');
       caption.textContent = 'This preview could not load. The current screenshot is still available; explore the repository for more.';
     };
-    image.src = root + view.file;
+    image.sizes = previewSizes;
+    image.srcset = previewSrcset(view.file);
+    image.src = root + view.file.replace('.png', '-1440.webp');
   }));
 })();
