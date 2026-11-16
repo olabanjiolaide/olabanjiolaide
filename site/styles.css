@@ -153,3 +153,7 @@ html{scrollbar-color:#8caa92 #edf1e9;scrollbar-width:thin}
 
 /* Full-width previews must leave normal document flow when scrolling. */
 .project-showcase .project-preview{position:relative;top:auto}
+
+/* Real saved-replay dashboard capture, without print margins or artificial crop. */
+.edge-project-preview{padding:24px;background:#e9eee5}.edge-project-preview img{height:auto;max-height:none;width:100%;object-fit:contain;border-radius:8px}.edge-capture-window{max-width:none;aspect-ratio:auto;overflow:visible}.edge-capture-window img{width:100%;max-width:none;height:auto}
+@media(max-width:480px){.edge-project-preview{padding:12px}.edge-project-preview img{height:auto;max-height:none}}
