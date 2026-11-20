@@ -8,7 +8,7 @@ I study multimodal and federated learning at the Network Intelligence and Innova
 
 I am seeking applied AI, ML engineering, and Python development opportunities in Canada.
 
-## Selected public projects
+## Selected engineering projects
 
 ### Support Ticket AI
 
@@ -23,6 +23,8 @@ A Python, scikit-learn, and FastAPI application for reviewing support-request cl
 
 [Engineering case study](https://olabanjiolaide.github.io/olabanjiolaide/support-ticket-ai.html) · [Repository](https://github.com/olabanjiolaide/support-ticket-ai) · [Run locally](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/07-running-the-demo.md) · [Baseline evaluation](https://github.com/olabanjiolaide/support-ticket-ai/blob/main/docs/04-baseline-results.md)
 
+[Try the interactive workflow demo](https://olabanjiolaide.github.io/olabanjiolaide/support-ticket-demo.html) — fixed synthetic examples and a working review flow; no hosted model inference.
+
 ### TriDecept-MARL
 
 A Python simulation project for comparing defensive policies in CAGE Challenge 4 / CybORG.
@@ -36,6 +38,22 @@ A Python simulation project for comparing defensive policies in CAGE Challenge 4
 [Simulation case study](https://olabanjiolaide.github.io/olabanjiolaide/tridecept-marl.html)
 
 Source repository and experiment reports are private.
+
+### Edge Sensor Monitor
+
+Sensor replay, causal statistical anomaly detection, persistent incidents, and human review. A local demonstrator with known detector limitations; source remains private.
+
+[Project overview](https://olabanjiolaide.github.io/olabanjiolaide/edge-sensor-monitor.html)
+
+### Wearable Twin Lab
+
+Wearable-data replay, participant-disjoint evaluation, calibrated state estimates, and uncertainty diagnostics. Development prototype; independent validation is pending. Source remains private.
+
+[Wearable-data case study](https://olabanjiolaide.github.io/olabanjiolaide/wearable-twin-lab.html)
+
+## Public identity
+
+I am **Olabanji Olaide**, publishing public engineering work on GitHub as **olabanjiolaide**. My [personal portfolio](https://olabanjiolaide.github.io/olabanjiolaide/) connects my research background, projects, and contact details.
 
 ## Skills demonstrated
 
