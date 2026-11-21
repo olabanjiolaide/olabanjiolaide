@@ -38,6 +38,9 @@ jobs:
         with:
           # Upload only the portfolio; keep archived templates out of the published site
           path: 'site'
+      # Allow uploaded artifact metadata to become visible to the Pages API.
+      - name: Wait for artifact availability
+        run: sleep 20
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
