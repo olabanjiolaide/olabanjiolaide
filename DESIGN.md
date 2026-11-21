@@ -17,3 +17,6 @@ Use the supplied portrait and real project screenshots. Retain descriptive alt t
 
 ## References
 getdesign.md informed this durable specification; no third-party brand identity is copied. Impeccable informed hierarchy and refinement. Emil Kowalski's emil-design-eng informed input-specific animation, easing, and touch hover behavior. Taste Skill is installed as an optional art-direction reference; its commercial-site and browser-runner assumptions are not the workflow for this academic portfolio.
+
+## Project demo discoverability
+When a project has a public interactive experience, show a high-contrast, always-visible demo button beside its title/summary and a secondary case-study link. Repeat the demo entry in the screenshot toolbar when the preview precedes the summary, and in the case-study introduction. Do not bury it among repository or setup links, depend on hover, or use motion to attract attention. Keep touch targets at least 44px and wrap controls on phones. Label the actual experience: browser walkthrough, recorded replay, or hosted model inference. State synthetic/no-inference limits beside the CTA. Use “Run locally” for setup instructions so they cannot be mistaken for the public demo. Do not show a live-demo CTA for an unavailable service or private repository.
